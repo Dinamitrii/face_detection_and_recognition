@@ -21,7 +21,7 @@ knn.fit(faces, labels)
 # Face Recognition using KNN
 while True:
     ret, fr = cam.read()
-    if ret == True:
+    if ret:
         gray = cv2.cvtColor(fr, cv2.COLOR_BGR2GRAY)
         face_coordinates = facec.detectMultiScale(gray, 1.3, 5)
 
