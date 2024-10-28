@@ -1,3 +1,5 @@
+from importlib.metadata import requires
+
 import cv2
 import numpy as np
 import os
@@ -15,10 +17,10 @@ ret = True
 
 
 # Face recognition using KNN
-while(ret):
+while ret:
     ret, frame = cam.read()
 
-    if ret == True:
+    if ret:
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         face_coordinates = facec.detectMultiScale(gray, 1.3, 4)
