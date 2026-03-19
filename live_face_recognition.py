@@ -32,7 +32,7 @@ while True:
             cv2.putText(fr, text[0], (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2)
             cv2.rectangle(fr, (x, y), (x + w, y + w), (0, 0, 255), 2)
 
-        cv2.imshow('livetime face recognition', fr)
+        cv2.imshow('live-time face recognition', fr)
         if cv2.waitKey(1) == 27:
             break
     else:
